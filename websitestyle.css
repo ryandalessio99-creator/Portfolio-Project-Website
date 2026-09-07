@@ -14,7 +14,7 @@ html {
 }
 
 
-/* Body */
+/* Body Styles */
 body {
   font-family: Arial, sans-serif;
   color: #333;
@@ -31,7 +31,7 @@ body {
 }
 
 
-/* Navigation */
+/* Navigation Bar */
 .navbar {
   position: sticky;
   top: 0;
@@ -39,7 +39,6 @@ body {
   z-index: 1000;
 
   background: rgba(15, 39, 71, 0.55);
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -54,7 +53,7 @@ body {
 }
 
 .nav-logo {
-  color: white;
+  color: #ffffff;
   font-size: 22px;
   font-weight: bold;
   text-decoration: none;
@@ -66,7 +65,7 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
 }
@@ -96,69 +95,48 @@ section {
   justify-content: space-between;
 
   gap: 50px;
-
   padding: 80px 28px;
 }
 
-
-/* Original teal transparency */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
 
   background: rgba(6, 120, 125, 0.55);
-
   z-index: 1;
 }
 
-
-/* Hero Content */
 .hero > * {
   position: relative;
   z-index: 2;
 }
 
-
-/* Hero Heading */
 .hero h1 {
   color: #ffffff;
-
   font-size: clamp(34px, 4vw, 54px);
-
   font-weight: 700;
-
   margin: 0;
-
   flex: 1;
 }
 
-
-/* Profile Image */
 .hero img {
   width: 210px;
   height: 210px;
 
   object-fit: cover;
-
   border-radius: 50%;
 
   border: 7px solid rgba(255, 255, 255, 0.95);
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
 
   flex-shrink: 0;
 }
 
-
-/* Hero Paragraph */
 .hero p {
   color: rgba(255, 255, 255, 0.95);
-
   font-size: 20px;
-
   margin: 0;
-
   flex: 1;
 }
 
@@ -166,19 +144,15 @@ section {
 /* About Me */
 .about-me {
   padding: 70px 28px;
-
   color: #ffffff;
 }
 
-
-/* Original purple/blue transparency */
 .about-me::before {
   content: "";
   position: absolute;
   inset: 0;
 
   background: rgba(75, 80, 150, 0.48);
-
   z-index: 1;
 }
 
@@ -188,25 +162,83 @@ section {
 }
 
 .about-me h2 {
-  color: white;
+  color: #ffffff;
   font-size: 34px;
 }
 
 .about-me p {
-  color: white;
-
+  color: #ffffff;
   font-size: 18px;
-
   max-width: 1100px;
-
   line-height: 1.8;
+}
+
+
+/* Skills */
+.skills-section {
+  position: relative;
+  padding: 70px 28px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.skills-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(6, 120, 125, 0.45);
+  z-index: 1;
+}
+
+.skills-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.skills-section h2 {
+  color: #ffffff;
+  font-size: 34px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 60px;
+}
+
+.skill {
+  width: 120px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.skill i {
+  color: #ffffff;
+  font-size: 60px;
+  margin-bottom: 12px;
+}
+
+.skill p {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.skill:hover {
+  transform: translateY(-8px);
 }
 
 
 /* Coding Experience */
 .coding-experience {
   padding: 70px 28px;
-
   color: #ffffff;
 }
 
@@ -216,7 +248,6 @@ section {
   inset: 0;
 
   background: rgba(23, 63, 107, 0.38);
-
   z-index: 1;
 }
 
@@ -226,17 +257,14 @@ section {
 }
 
 .coding-experience h2 {
-  color: white;
+  color: #ffffff;
   font-size: 34px;
 }
 
 .coding-experience p {
-  color: white;
-
+  color: #ffffff;
   font-size: 18px;
-
   max-width: 1100px;
-
   line-height: 1.8;
 }
 
@@ -256,17 +284,15 @@ section {
   .nav-links {
     gap: 14px;
     font-size: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero {
     min-height: 60vh;
-
     flex-direction: column;
-
     justify-content: center;
-
     text-align: center;
-
     padding: 50px 20px;
   }
 
@@ -280,7 +306,20 @@ section {
   }
 
   .about-me,
+  .skills-section,
   .coding-experience {
     padding: 48px 20px;
+  }
+
+  .skills-container {
+    gap: 35px;
+  }
+
+  .skill {
+    width: 90px;
+  }
+
+  .skill i {
+    font-size: 48px;
   }
 }

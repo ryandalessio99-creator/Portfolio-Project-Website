@@ -4,10 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Ryan's Website!</title>
 
   <link rel="stylesheet" href="./websitestyle.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -21,34 +24,28 @@
       <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
         <a href="#coding">Coding Experience</a>
       </div>
 
     </div>
   </nav>
 
-
   <div class="site-overlay">
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-
       <h1>Ryan's Website</h1>
 
-      <img
-        src="./img/personpic.jpg"
+      <img src="./img/personpic.jpg"
         alt="Picture of Ryan"
-        class="profile-picture"
-      >
+        class="profile-picture">
 
       <p>Look below for more fun facts about me!</p>
-
     </section>
-
 
     <!-- About Me Section -->
     <section class="about-me" id="about">
-
       <h2>About Me</h2>
 
       <p>
@@ -57,13 +54,44 @@
         either playing video games on my computer or exploring new
         technologies.
       </p>
-
     </section>
 
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+      <h2>My Skills</h2>
+
+      <div class="skills-container">
+
+        <div class="skill">
+          <i class="fa-brands fa-html5"></i>
+          <p>HTML</p>
+        </div>
+
+        <div class="skill">
+          <i class="fa-brands fa-css3-alt"></i>
+          <p>CSS</p>
+        </div>
+
+        <div class="skill">
+          <i class="fa-brands fa-js"></i>
+          <p>JavaScript</p>
+        </div>
+
+        <div class="skill">
+          <i class="fa-brands fa-python"></i>
+          <p>Python</p>
+        </div>
+
+        <div class="skill">
+          <i class="fa-solid fa-database"></i>
+          <p>SQL</p>
+        </div>
+
+      </div>
+    </section>
 
     <!-- Coding Experience Section -->
     <section class="coding-experience" id="coding">
-
       <h2>Coding Experience</h2>
 
       <p>
@@ -72,11 +100,9 @@
         I enjoy building interactive projects and learning about new
         coding languages.
       </p>
-
     </section>
 
   </div>
 
 </body>
-
 </html>
