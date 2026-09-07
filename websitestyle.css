@@ -1,7 +1,4 @@
-/* =========================
-   GLOBAL STYLES
-   ========================= */
-
+/* Global Styles */
 html,
 body {
   min-height: 100%;
@@ -17,10 +14,7 @@ html {
 }
 
 
-/* =========================
-   BODY
-   ========================= */
-
+/* Body */
 body {
   font-family: Arial, sans-serif;
   color: #333;
@@ -30,28 +24,21 @@ body {
   background-image: url("./img/hhd.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed;
 
   min-height: 100vh;
 }
 
 
-/* =========================
-   NAVIGATION BAR
-   ========================= */
-
+/* Navigation */
 .navbar {
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
 
-  /* Semi-transparent navy */
-  background: rgba(15, 39, 71, 0.58);
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(15, 39, 71, 0.55);
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -66,20 +53,12 @@ body {
   justify-content: space-between;
 }
 
-
-/* Ryan Logo */
-
 .nav-logo {
-  color: #ffffff;
-
+  color: white;
   font-size: 22px;
   font-weight: bold;
-
   text-decoration: none;
 }
-
-
-/* Navigation Links */
 
 .nav-links {
   display: flex;
@@ -87,236 +66,187 @@ body {
 }
 
 .nav-links a {
-  color: rgba(255, 255, 255, 0.9);
-
+  color: white;
   text-decoration: none;
   font-weight: 500;
-
-  transition: 0.2s;
 }
 
 .nav-links a:hover {
-  color: #ffffff;
-  transform: translateY(-2px);
+  text-decoration: underline;
 }
 
 
-/* =========================
-   MAIN WEBSITE
-   ========================= */
-
+/* Main Sections */
 .site-overlay {
   min-height: 100vh;
 }
 
 section {
   position: relative;
-
   padding: 60px 20px;
-
-  text-align: center;
 }
 
 
-/* =========================
-   HERO SECTION
-   ========================= */
-
+/* Hero Section */
 .hero {
-  min-height: 56vh;
+  min-height: 68vh;
 
   display: flex;
-  flex-direction: column;
-
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
-  padding: 56px 20px;
+  gap: 50px;
 
-  overflow: hidden;
+  padding: 80px 28px;
 }
 
 
-/* Transparent Hero Background */
-
+/* Original teal transparency */
 .hero::before {
   content: "";
-
   position: absolute;
   inset: 0;
 
-  /* Transparent navy */
-  background: rgba(15, 39, 71, 0.35);
-
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background: rgba(6, 120, 125, 0.55);
 
   z-index: 1;
 }
 
 
-/* Profile Picture */
-
-.hero img {
-  width: 140px;
-  height: 140px;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  border: 5px solid rgba(255, 255, 255, 0.9);
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-
-  margin: 0 auto 18px;
-
+/* Hero Content */
+.hero > * {
   position: relative;
   z-index: 2;
 }
 
 
 /* Hero Heading */
-
 .hero h1 {
-  margin: 8px 0 10px;
-
   color: #ffffff;
 
-  font-size: clamp(26px, 4.5vw, 42px);
+  font-size: clamp(34px, 4vw, 54px);
 
   font-weight: 700;
 
-  letter-spacing: -0.5px;
+  margin: 0;
 
-  position: relative;
-  z-index: 2;
+  flex: 1;
+}
 
-  /* Helps white text stand out */
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+
+/* Profile Image */
+.hero img {
+  width: 210px;
+  height: 210px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 7px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+
+  flex-shrink: 0;
 }
 
 
 /* Hero Paragraph */
-
 .hero p {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.95);
 
-  max-width: 760px;
+  font-size: 20px;
 
-  margin: 0 auto;
+  margin: 0;
 
-  position: relative;
-  z-index: 2;
-
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  flex: 1;
 }
 
 
-/* =========================
-   ABOUT ME
-   ========================= */
-
+/* About Me */
 .about-me {
-  padding: 48px 20px;
+  padding: 70px 28px;
 
   color: #ffffff;
 }
 
 
-/* Transparent Teal */
-
+/* Original purple/blue transparency */
 .about-me::before {
   content: "";
-
   position: absolute;
   inset: 0;
 
-  background: rgba(22, 140, 140, 0.30);
-
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background: rgba(75, 80, 150, 0.48);
 
   z-index: 1;
 }
 
-.about-me h2,
+.about-me > * {
+  position: relative;
+  z-index: 2;
+}
+
+.about-me h2 {
+  color: white;
+  font-size: 34px;
+}
+
 .about-me p {
-  color: #ffffff;
+  color: white;
 
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  font-size: 18px;
+
+  max-width: 1100px;
+
+  line-height: 1.8;
 }
 
 
-/* =========================
-   CODING EXPERIENCE
-   ========================= */
-
+/* Coding Experience */
 .coding-experience {
-  padding: 48px 20px;
+  padding: 70px 28px;
 
   color: #ffffff;
 }
-
-
-/* Transparent Blue */
 
 .coding-experience::before {
   content: "";
-
   position: absolute;
   inset: 0;
 
-  background: rgba(23, 63, 107, 0.35);
-
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background: rgba(23, 63, 107, 0.38);
 
   z-index: 1;
 }
 
-.coding-experience h2,
-.coding-experience p {
-  color: #ffffff;
-
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
-}
-
-
-/* =========================
-   SECTION CONTENT
-   ========================= */
-
-/* Keep text above transparent backgrounds */
-
-section > * {
+.coding-experience > * {
   position: relative;
   z-index: 2;
 }
 
+.coding-experience h2 {
+  color: white;
+  font-size: 34px;
+}
 
-/* Keep paragraphs from getting too wide */
+.coding-experience p {
+  color: white;
 
-section p {
-  max-width: 800px;
+  font-size: 18px;
 
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1100px;
+
+  line-height: 1.8;
 }
 
 
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 640px) {
+/* Mobile */
+@media (max-width: 700px) {
 
   body {
     background-attachment: scroll;
   }
-
-
-  /* Navigation */
 
   .nav-container {
     flex-direction: column;
@@ -324,32 +254,33 @@ section p {
   }
 
   .nav-links {
-    gap: 15px;
+    gap: 14px;
     font-size: 14px;
   }
 
-
-  /* Hero */
-
   .hero {
-    min-height: 48vh;
-    padding: 36px 16px;
+    min-height: 60vh;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
   }
 
   .hero img {
-    width: 110px;
-    height: 110px;
+    width: 150px;
+    height: 150px;
   }
 
-  .hero h1 {
-    font-size: clamp(24px, 7vw, 30px);
+  .hero p {
+    font-size: 17px;
   }
 
-
-  /* Sections */
-
-  section {
-    padding-left: 16px;
-    padding-right: 16px;
+  .about-me,
+  .coding-experience {
+    padding: 48px 20px;
   }
 }
