@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,10 +12,27 @@
 
 <body>
 
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="#home" class="nav-logo">Ryan</a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#coding">Coding Experience</a>
+      </div>
+
+    </div>
+  </nav>
+
+
   <div class="site-overlay">
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
+
       <h1>Ryan's Website</h1>
 
       <img
@@ -25,11 +42,13 @@
       >
 
       <p>Look below for more fun facts about me!</p>
+
     </section>
 
 
     <!-- About Me Section -->
-    <section class="about-me">
+    <section class="about-me" id="about">
+
       <h2>About Me</h2>
 
       <p>
@@ -38,11 +57,13 @@
         either playing video games on my computer or exploring new
         technologies.
       </p>
+
     </section>
 
 
     <!-- Coding Experience Section -->
-    <section class="coding-experience">
+    <section class="coding-experience" id="coding">
+
       <h2>Coding Experience</h2>
 
       <p>
@@ -51,6 +72,7 @@
         I enjoy building interactive projects and learning about new
         coding languages.
       </p>
+
     </section>
 
   </div>

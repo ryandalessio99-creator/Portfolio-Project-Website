@@ -1,125 +1,344 @@
 /* Global Styles */
-html, body {
-    height: 100%;
-    margin: 0;
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 
 /* Body Styles */
+
 body {
-    font-family: sans-serif, arial;
-    color: #333;
-    line-height: 1.6;
-    background-color: #dff6fb;
-    background-image: url('img/hhd.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
 
-.site-overlay {
-    min-height: 100vh;
-    background: transparent;
-}
+  background-color: #dff6fb;
+  background-image: url("./img/hhd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 
-section {
-    position: relative;
-    padding: 60px 20px;
-}
-
-.section inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    z-index: 2;
+  min-height: 100vh;
 }
 
 
-/* Hero Section */
-.hero {
-  min-height: 56vh;
+/* Navigation Bar */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  z-index: 1000;
+
+  background: rgba(15, 39, 71, 0.85);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* Navigation Container */
+
+.nav-container {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 14px 20px;
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 56px 20px; 
+  justify-content: space-between;
 }
+
+
+/* Ryan Logo */
+
+.nav-logo {
+  color: #ffffff;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition: 0.2s;
+}
+
+
+/* Navigation Hover Effect */
+
+.nav-links a:hover {
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* Main Website */
+
+.site-overlay {
+  min-height: 100vh;
+}
+
+
+section {
+  position: relative;
+
+  padding: 60px 20px;
+
+  text-align: center;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 56vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 56px 20px;
+
+  overflow: hidden;
+}
+
+
+/* Hero Transparent Background */
 
 .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(6, 120, 125, 0.55);
-    z-index: 1;
-    backdrop-filter: blur(2px);
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(15, 39, 71, 0.65);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  z-index: 1;
 }
 
 
-/* avatar styling (circular, centered, elevated) */
+/* Profile Picture */
+
 .hero img {
   width: 140px;
   height: 140px;
+
   object-fit: cover;
+
   border-radius: 50%;
-  border: 6px solid rgba(255,255,255,0.95);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.28);
-  display: block;
+
+  border: 5px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
   margin: 0 auto 18px;
+
   position: relative;
+
   z-index: 2;
 }
 
-/* Hero heading and supporting text */
+
+/* Hero Heading */
+
 .hero h1 {
   margin: 8px 0 10px;
+
   color: #ffffff;
+
   font-size: clamp(26px, 4.5vw, 42px);
+
   font-weight: 700;
+
   letter-spacing: -0.5px;
+
   position: relative;
-  z-index: 2;
-}
-.hero p {
-  color: rgba(255,255,255,0.95);
-  max-width: 760px;
-  margin: 0 auto;
-  position: relative;
+
   z-index: 2;
 }
 
-/* ABOUT section: purple translucent band */
+
+/* Hero Paragraph */
+
+.hero p {
+  color: rgba(255, 255, 255, 0.95);
+
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* ABOUT ME SECTION */
+
+.about-me {
+  padding: 48px 20px;
+
+  color: #ffffff;
+}
+
+
 .about-me::before {
   content: "";
+
   position: absolute;
+
   inset: 0;
-  background: rgba(95, 80, 160, 0.45);
+
+  background: rgba(22, 140, 140, 0.62);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
   z-index: 1;
 }
-.about-me, .about-me h2, .about-me p {
+
+
+.about-me h2,
+.about-me p {
   color: #ffffff;
 }
-.about-me { padding: 48px 20px; }
 
-/* SKILLS (example green band) */
-.skills-section::before {
+
+/* CODING EXPERIENCE SECTION */
+
+.coding-experience {
+  padding: 48px 20px;
+
+  color: #ffffff;
+}
+
+
+.coding-experience::before {
   content: "";
+
   position: absolute;
+
   inset: 0;
-  background: rgba(200, 210, 150, 0.85); /* muted green */
+
+  background: rgba(23, 63, 107, 0.70);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
   z-index: 1;
 }
-.skills-section { padding: 48px 20px; color: #163a2f; }
 
-/* make sure section content sits above overlays */
-section > * { position: relative; z-index: 2; }
 
-/* small-screen adjustments */
+.coding-experience h2,
+.coding-experience p {
+  color: #ffffff;
+}
+
+
+/* Keep Content Above Transparent Overlays */
+
+section > * {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* Paragraph Width */
+
+section p {
+  max-width: 800px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Mobile Adjustments */
+
 @media (max-width: 640px) {
-  .hero { min-height: 48vh; padding: 36px 16px; }
-  .hero img { width: 110px; height: 110px; }
-  .hero h1 { font-size: clamp(20px, 7vw, 30px); }
-  .section-inner { padding: 0 12px; }
+
+  body {
+    background-attachment: scroll;
+  }
+
+
+  /* Mobile Navigation */
+
+  .nav-container {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .nav-links {
+    gap: 15px;
+
+    font-size: 14px;
+  }
+
+
+  /* Mobile Hero */
+
+  .hero {
+    min-height: 48vh;
+
+    padding: 36px 16px;
+  }
+
+  .hero img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .hero h1 {
+    font-size: clamp(24px, 7vw, 30px);
+  }
+
+
+  /* Mobile Sections */
+
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
