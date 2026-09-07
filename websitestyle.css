@@ -218,7 +218,8 @@ section {
   transition: transform 0.2s;
 }
 
-.skill i {
+.skill .material-icons {
+  display: block;
   color: #ffffff;
   font-size: 60px;
   margin-bottom: 12px;
@@ -319,7 +320,7 @@ section {
     width: 90px;
   }
 
-  .skill i {
+  .skill .material-icons {
     font-size: 48px;
   }
 }
